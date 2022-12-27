@@ -5,7 +5,7 @@ var blockingItem = "";
 var ctxMenuHolder;
 var marketLastMoney = false;
 var lastItemSold = "";
-console.log("inventory edited");
+//console.log("inventory edited");
 var lockedSlots = [];
 
 if(typeof useVars === "undefined")
@@ -3299,6 +3299,7 @@ function dragDropAction(e)
 		case "sendItemPrivate":
 			extraData["sendto"] = userVars["member_to"];
 		case "sellitem":
+			console.log("case sellitem");
 			itemData = [parseInt(currentItem.parentNode.dataset.slot), currentItem.dataset.type, currentItem.parentNode.parentNode.parentNode.id, currentItem.dataset.quantity];
 			extraData["itemData"] = itemData;
 			question = true;
@@ -3914,6 +3915,7 @@ function dragDropAction(e)
 
 function doSellFromScript(itemElem, marketElem)
 {
+	console.log("doSellFromScript");
 	itemType = itemElem.dataset.type.split('_');
 	var extraData = {};
 	if(tradeTimer !== undefined)
