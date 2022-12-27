@@ -1,5 +1,5 @@
 var pData = {};
-
+console.log("v1");
 var lockEnterKey = false;
 
 function initBank(flashErl)
@@ -132,6 +132,7 @@ function deposit(all)
 
 function withdraw(all)
 {
+	console.log("withdrawing");
 	if(!pageLock)
 	{
 		pageLock = true;
