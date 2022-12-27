@@ -5,7 +5,7 @@ var blockingItem = "";
 var ctxMenuHolder;
 var marketLastMoney = false;
 var lastItemSold = "";
-console.log("inventory edited!");
+console.log("inventory edited! v11");
 var lockedSlots = [];
 
 if(typeof useVars === "undefined")
