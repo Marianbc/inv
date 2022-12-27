@@ -3253,6 +3253,7 @@ var moddedVars = userVars;
 
 function dragDropAction(e)
 {
+	
 	var itemType = currentItem.dataset.type.split('_');
 	fakeGrabbedItem.style.visibility = "hidden";
 	var nSlot = document.elementFromPoint(mousePos[0], mousePos[1]);
@@ -3300,6 +3301,8 @@ function dragDropAction(e)
 			extraData["sendto"] = userVars["member_to"];
 		case "sellitem":
 			console.log("case sellitem");
+			console.log(e);
+			console.trace();
 			itemData = [parseInt(currentItem.parentNode.dataset.slot), currentItem.dataset.type, currentItem.parentNode.parentNode.parentNode.id, currentItem.dataset.quantity];
 			extraData["itemData"] = itemData;
 			question = true;
@@ -3773,6 +3776,7 @@ function dragDropAction(e)
 			cleanPlacementMessage();
 			prompt.classList.remove("warning");
 			prompt.classList.remove("redhighlight");
+			console.log(action.toString());
 			action(extraData);
 		});
 		var dataInput = prompt.querySelectorAll("input");
@@ -4412,6 +4416,7 @@ function sellpriceConfirm(data)
 {
 	console.log("sellpriceConfirm");
 	console.log(data);
+	console.trace();
 	var salePrice = 0;
 	var quantity = false;
 	var priceInput = prompt.querySelector("input[data-type='price']");
@@ -4484,6 +4489,9 @@ function sellpriceConfirm(data)
 
 function sellItem(data)
 {
+	console.log("check this out, sellItem");
+	console.log(data);
+	console.trace();
 	marketLastMoney = data[2];
 
 	var dataArr = {};
