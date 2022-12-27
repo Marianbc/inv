@@ -3767,6 +3767,8 @@ function dragDropAction(e)
 		yesButton.style.top = "72px";
 		yesButton.addEventListener("click", function()
 		{
+			console.log("extraData: ");
+			console.log(extraData);
 			yesButton.disabled = true;
 			cleanPlacementMessage();
 			prompt.classList.remove("warning");
@@ -4408,6 +4410,8 @@ function scrapItem(data)
 
 function sellpriceConfirm(data)
 {
+	console.log("sellpriceConfirm");
+	console.log(data);
 	var salePrice = 0;
 	var quantity = false;
 	var priceInput = prompt.querySelector("input[data-type='price']");
