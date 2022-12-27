@@ -3761,6 +3761,8 @@ function dragDropAction(e)
 	});
 	if(question)
 	{
+		console.log("question:");
+		console.log(question);
 		noButton.textContent = "No";
 		noButton.style.left = "151px";
 		var yesButton = document.createElement("button");
@@ -5063,6 +5065,8 @@ function dragStart(e)
 
 function dragEnd(e)
 {
+	console.log("drag end");
+	console.log(e);
 	if(active && !pageLock)
 	{
 		e.preventDefault();
@@ -5117,6 +5121,7 @@ function dragEnd(e)
 					if(canComplete)
 					{
 						pageLock = true;
+						console.log(e);
 						dragDropAction(e);
 					}
 				}
