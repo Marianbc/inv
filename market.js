@@ -2040,5 +2040,5 @@ function search()
 		flshToArr(data, "", listMarket);
 		populateInventory();
 		updateAllFields();
-	}, true);
+	});
 }
